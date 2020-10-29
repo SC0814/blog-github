@@ -65,7 +65,18 @@ cd blog
 npm install
 
 # 启动数据库
-mongod
+mongod  
+
+
+
+#ios本地cmj是这么启动的 ，显然是有问题的，之后再研究
+
+#mongodb添加环境变量
+export PATH=/usr/local/mongodb/bin:$PATH
+# 启动mongod
+mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log --fork
+
+
 
 # 启动服务器
 node app

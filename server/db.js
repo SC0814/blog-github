@@ -1,6 +1,13 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/blog')
+// mongoose.connect('mongodb://localhost:27017/blog')
+
+
+ mongoose.connect("mongodb://localhost:27017/blog", {
+   useMongoClient: true,
+   /* other options */
+ });
+
 
 const userSchema = new mongoose.Schema({
   name: String,
